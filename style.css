@@ -1,0 +1,80 @@
+/* 
+  David Cordova
+  Feb 29th, 2020
+  GIT 417 Final
+*/
+
+@import url('https://use.typekit.net/lwu1gud.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: fira-sans-condensed-2, sans-serif;
+  font-weight: 900;
+  font-style: bold;
+}
+
+h1 {
+  font-family: fira-sans-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+h2 {
+  font-family: fira-sans-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h3 {
+  font-family: alegreya, serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: alegreya, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  font-family: fira-sans-condensed-2, sans-serif;
+  font-weight: 900;
+  font-style: bold;
+}
+
+code {
+  font-family: source-code-pro, monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Heading */
+header {
+  min-height: 6rem;
+}
+
+.author {
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    min-height: 10rem;
+  }
+
+  .author {
+    text-align: left;
+  }
+}
+
+aside {
+  min-height: 18rem;
+}

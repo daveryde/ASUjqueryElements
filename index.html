@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- 
+      David Cordova
+      May 4th, 2020
+      GIT 418 Final 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Final Project</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark-reasonable.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+    <!-- Global Container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Header -->
+          <header class="d-flex justify-content-center align-items-center">
+            <h1 class="border-bottom border-dark">Creating Objects with jQuery</h1>
+        </div>
+        <div class="col-sm-12 mb-3">
+          <p class="author text-muted">By: David Cordova</p>
+        </div>
+        </header>
+        <!-- Main / Introduction -->
+        <main class="container">
+          <article class="row mb-4">
+            <div class="col-lg-10 col-md-8 col-sm-12 mx-auto">
+              <h2><u>Introduction</u></h2>
+              <p class="py-3">
+                jQuery removes some of the tedious work from coding JavaScript, and also provides a shortcut for some
+                of the complicated parts of writing JavaScript. By definition, <code>jQuery</code> is a cross-browser
+                library, automatically including alternate code where neccessary to support different browsers.
+              </p>
+              <p>
+                Here are some examples of how to use jQuery to traverse
+                the DOM, and dynamically create and display new page elements.
+              </p>
+            </div>
+          </article>
+          <hr class="border-dark">
+          <!-- Aside / Topic Menu Index -->
+          <aside class="row justify-content-center align-items-center">
+            <div class="col-lg-3 mb-4">
+              <h2 class="pb-3"><u>Index</u></h2>
+              <div class="pt-4 list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-browser-list" data-toggle="list"
+                  href="#list-browser" role="tab" aria-controls="browser">1. What Is A jQuery Selector?
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-javascript-list" data-toggle="list"
+                  href="#list-javascript" role="tab" aria-controls="javascript">2. jQuery Selector In Action
+                </a>
+              </div>
+            </div>
+            <!-- Topic Breakdown with Links -->
+            <div class="col-sm-12 col-lg-7">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-browser" role="tabpanel"
+                  aria-labelledby="list-browser-list">
+                  <p>
+                    What Is A jQuery Selector?
+                  </p>
+                  <pre
+                  class="rounded"><code class="javascript">$(document).ready(function () {<br>  /* Find li element */<br>  var listElement = $('li');<br>}</code></pre>
+                  <p>
+                    See <a href="#jquerySelector">More ..</a>
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="list-javascript" role="tabpanel" aria-labelledby="list-javascript-list">
+                  <p>
+                    2. jQuery Selector In Action
+                  </p>
+                  <pre
+                  class="rounded"><code class="javascript">$(document).ready(function () {<br>  var txt = "string";<br><br>  var newEl = $("&lt;li&gt;"); <br><br>  newEl.text(txt);<br><br>  $("#listicle").append(newEl); <br>}</code></pre>
+                  <p>
+                    See <a href="#jQueryInAction">More ..</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <hr class='mb-5 border-dark'>
+          <!-- What Is A jQuery Selector? -->
+          <section>
+            <div class="col-sm-10 col-lg-12 mb-5 jumbotron text-center shadow-sm" id="jquerySelector">
+              <h2 class="display-4">What Is A jQuery Selector?</h2>
+            </div>
+            <p class="my-5">
+              In every jQuery statement, the <mark>$</mark> is followed by a reference to the element or elements on
+              which the statement operates, contained in parentheses. To select elements in jQuery, you specify a CSS
+              selector, contained in single or double quotes. For instance, to start a jQuery statement that operates on
+              <mark>li</mark> elements, you use the following syntax.
+            </p>
+            <div class="row justify-content-center align-items-center my-5">
+              <div class="col-sm-12 col-lg-5">
+                <h2>jQuery Selector Example</h2>
+              </div>
+              <div class="col-sm-12 col-lg-7 my-5">
+                <pre
+                  class="rounded"><code class="javascript">$(document).ready(function () {<br>  /* Find li element */<br>  var listElement = $('li');<br>}</code></pre>
+              </div>
+            </div>
+          </section>
+          <!-- jQuery Selector In Action -->
+          <section>
+            <div class="col-sm-10 col-lg-12 my-5 jumbotron text-center shadow-sm" id="jQueryInAction">
+              <h2 class="display-4">jQuery Selector In Action</h2>
+            </div>
+            <p class="my-5">
+              Creating elements can be accomplished with the same selector syntax that we used to find elements. The
+              selector will traverse the DOM looking for what you place inside the selector or create an element if you
+              explicity place an HTML tag element in the selector. This way, jQuery element functions will work on this
+              dynamically created element before being added to the DOM.
+            </p>
+            <div class="row justify-content-center align-items-center my-5">
+              <div class="col-sm-12 col-lg-5">
+                <h2>Ordered List Example</h2>
+              </div>
+              <div class="col-sm-12 col-lg-7 my-5">
+                <h3>1. HTML</h3>
+                <pre><code class="language-html">&lt;ol id="listicle"&gt;<br>&lt;li&gt;List Item 1&lt;li/&gt;<br>&lt;ol/&gt;</code></pre>
+              </div>
+              <div class="col-sm-12 col-lg-5">
+                <h2>jQuery create and add item</h2>
+              </div>
+              <div class="col-sm-12 col-lg-7 my-5">
+                <h3>2. jQuery</h3>
+                <pre
+                  class="rounded"><code class="javascript">$(document).ready(function () {<br>  var txt = "string";<br><br>  var newEl = $("&lt;li&gt;"); <br><br>  newEl.text(txt);<br><br>  $("#listicle").append(newEl); <br>}</code></pre>
+              </div>
+            </div>
+          </section>
+          <!-- Test / Debug -->
+          <section>
+            <div class="col-sm-10 col-lg-12 my-5 jumbotron text-center shadow-sm" id="testDebug">
+              <h2 class="display-4">Test / Debug</h2>
+            </div>
+            <p class="my-5">
+              If you've been following along, your code should look or feel similar to the full example code below.
+            </p>
+            <div class="row justify-content-center my-5">
+              <!-- <div class="col-sm-12 col-lg-5 my-5"> -->
+              <div class="col-sm-12 col-lg-10 my-5">
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result"
+                  data-user="daveryde" data-slug-hash="ExVWVRK"
+                  style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                  data-pen-title="jQuery and createElement Issue">
+                  <span>See the Pen <a href="https://codepen.io/daveryde/pen/ExVWVRK">
+                      jQuery and createElement Issue</a> by David Cordova (<a
+                      href="https://codepen.io/daveryde">@daveryde</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    <!-- Highlight JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+
+</html>
